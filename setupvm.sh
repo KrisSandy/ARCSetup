@@ -46,3 +46,5 @@ echo "Installing helm3..."
 wget "https://get.helm.sh/$helmtar"
 tar -zxvf $helmtar
 sudo mv linux-arm/helm /usr/local/bin/helm
+rm $helmtar
+rm -r linux-arm
