@@ -12,14 +12,8 @@ wget "https://go.dev/dl/$gotar"
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf $gotar
 rm $gotar
+export PATH=\$PATH:/usr/local/go/bin
 echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-source ~/.profile
-
-
-# instal kind
-echo "Installing Kind..."
-go install sigs.k8s.io/kind@v0.14.0
-echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> ~/.profile
 
 # install docker 
 echo "Installing docker..."
@@ -30,6 +24,12 @@ rm get-docker.sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker 
+
+# instal kind
+echo "Installing Kind..."
+go install sigs.k8s.io/kind@v0.14.0
+export PATH=\$PATH:$(go env GOPATH)/bin
+echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> ~/.profile
 
 # install az
 echo "Installing az cli..."
