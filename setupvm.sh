@@ -48,3 +48,6 @@ tar -zxvf $helmtar
 sudo mv linux-arm/helm /usr/local/bin/helm
 rm $helmtar
 rm -r linux-arm
+
+echo "Creating kubernetes cluster"
+kind create cluster
