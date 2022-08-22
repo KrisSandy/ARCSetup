@@ -38,7 +38,7 @@ az extension add --name connectedk8s
 
 # install kubectl
 echo "Installing kubectl..."
-snap install kubectl --classic
+sudo snap install kubectl --classic
 sudo snap install kubectx --classic
 
 # install helm3
