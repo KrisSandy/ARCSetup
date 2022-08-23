@@ -8,3 +8,12 @@
 * Get installation script - `wget https://raw.githubusercontent.com/KrisSandy/ARCSetup/main/setupvm.sh`
 * Make script executable - `chmod +x setupvm.sh`
 * Execute script - `./setupvm.sh`
+
+## ARC Setup
+Once cluster is connected
+
+* Add user to access cluster from anywhere - `kubectl create clusterrolebinding demo-user-binding --clusterrole cluster-admin --user=<objectid>`
+* Run proxy connect server to access cluster - `az connectedk8s proxy -n AzureArcTest1 -g AzureArcTest`
+
+## Kuberneties commands 
+* Create a hello server - kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
