@@ -49,6 +49,8 @@ echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> ~/.profile
 echo "Installed kind"
 sleep 3
 
+# create cluster
 echo "Creating kubernetes cluster"
 kind create cluster
 echo "Created cluster"
+sleep 3
