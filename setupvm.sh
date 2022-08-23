@@ -14,7 +14,8 @@ sudo tar -C /usr/local -xzf $gotar
 rm $gotar
 export PATH=$PATH:/usr/local/go/bin
 echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-sleep 5
+echo "Installed go"
+sleep 3
 
 # install docker 
 echo "Installing docker..."
@@ -28,22 +29,25 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # sudo sh get-docker.sh
 # rm get-docker.sh
 # manage docker as a non-root user
-sudo groupadd docker
+# sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-sleep 5
+echo "Installed docker"
+sleep 3
 
 # install az
 echo "Installing az cli..."
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az extension add --name connectedk8s
-sleep 5
+echo "Installed az cli"
+sleep 3
 
 # install kubectl
 echo "Installing kubectl..."
 sudo snap install kubectl --classic
 sudo snap install kubectx --classic
-sleep 5
+echo "Installed kubectl"
+sleep 3
 
 # install helm3
 echo "Installing helm3..."
@@ -52,15 +56,17 @@ tar -zxvf $helmtar
 sudo mv linux-arm/helm /usr/local/bin/helm
 rm $helmtar
 rm -r linux-arm
-sleep 5
+echo "Installed helm3"
+sleep 3
 
 # instal kind
 echo "Installing Kind..."
 go install sigs.k8s.io/kind@v0.14.0
 export PATH=$PATH:$(go env GOPATH)/bin
 echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> ~/.profile
-sleep 5
+echo "Installed kind"
+sleep 3
 
 echo "Creating kubernetes cluster"
 kind create cluster
-sleep 5
+echo "Created cluster"
