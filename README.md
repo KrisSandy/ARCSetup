@@ -16,4 +16,4 @@ Once cluster is connected
 * Run proxy connect server to access cluster - `az connectedk8s proxy -n AzureArcTest1 -g AzureArcTest`
 
 ## Kuberneties commands 
-* Create a hello server - kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
+* Create a hello server - `kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4`
