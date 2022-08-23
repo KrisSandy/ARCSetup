@@ -6,4 +6,4 @@
 ## Installation script commands
 * Get installation script - `wget https://raw.githubusercontent.com/KrisSandy/ARCSetup/main/setupvm.sh`
 * Make script executable - `chmod +x setupvm.sh`
-* Execute script - `.\setupvm.sh`
+* Execute script - `./setupvm.sh`
