@@ -1,7 +1,7 @@
 #!/bin/bash
 
 gotar=go1.19.linux-amd64.tar.gz
-helmtar=helm-v3.6.3-linux-arm.tar.gz
+helmtar=helm-v3.6.3-linux-amd64.tar.gz
 
 sudo apt update -y
 sudo apt upgrade -y
