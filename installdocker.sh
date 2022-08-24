@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt update -y
+sudo apt upgrade -y
+
 # install docker 
 echo "Installing docker..."
 sudo apt-get install ca-certificates curl gnupg lsb-release
